@@ -1,17 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../App.css'
 import wms from '../images/wms5.jpg'
 
-const NavBar = () => {
-    return (
-        <div className='fixe mt-0 w-full'>
 
-            <div className='flex justify-between shadow-xl  pb-1 '>
-            <div className=' w-2/12 pl-4'><img className='rounded-full ' width='70px' src={wms} alt="" /></div>
-                <nav className='w-3/12 flex justify-around pt-4'>
-                    <a>Register</a>
-                    <a>Login</a>
-                </nav>
+const NavBar = () => {
+    const[hide, setHide]= useState(true)
+    return (
+        <div className='relative mt-0 w-full'>
+
+            <div className='md:flex justify-between shadow-xl  pb-1 '>
+            <div className=' md:w-2/12 pl-4 flex justify-between'>
+            <img className='rounded-full ' width='70px' src={wms} alt="" />
+            <button
+            className='p-4 md:hidden'
+            onClick={(e)=>setHide(!hide)}><svg xmlns="http://www.w3.org/2000/svg" fill="purple" viewBox="0 0 24 24" stroke-width="1.5" stroke="purple" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          </button>
+            </div>
+              {hide && (  <nav className='w-3/12 md:flex justify-around pt-4'>
+              <div><a>Register</a></div>
+              <div><a>Login</a></div>
+          </nav>)}
             </div>
 
 

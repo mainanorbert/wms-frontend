@@ -5,6 +5,7 @@ import React, { useEffect, useState } from 'react';
 
 const ShowMembers = () => {
   const [members, setMembers] = useState([]);
+  let i = 0
 
   useEffect(() => {
     const fetchMembers = async () => {
@@ -20,25 +21,25 @@ const ShowMembers = () => {
 
   return (
     <div className=' '>
-      <table className='table-auto bg-purple-00 w-full'>
+      <table className='table-auto bg-purple-600 md:w-full'>
         <thead>
-          <tr key='' className='text-neutral-300'>
-            <th className='border-r px-1'>No.</th>
-            <th className='border-r px-4'>Member No</th>
-            <th className='border-r px-4'>First Name</th>
-            <th className='border-r px-2'>Second Name</th>
-            <th className='border-r px-2'>Phone</th>
-            <th className='border-r px-2'>Email</th>
-            <th className='border-r px-2'>Id No.</th>
-            <th className='border-r px-2'>Reg. Amount</th>
-            <th className='border-r px-2'>Status</th>
+          <tr key='' className='text-neutral-300 md:text-sm text-xs'>
+            <th className='border-r md:px-1'>No.</th>
+            <th className='border-r md:px-4'>Member No</th>
+            <th className='border-r md:px-4'>First Name</th>
+            <th className='border-r md:px-2'>Second Name</th>
+            <th className='border-r md:px-2'>Phone</th>
+            <th className='border-r md:px-2'>Email</th>
+            <th className='border-r md:px-2'>Id No.</th>
+            <th className='border-r md:px-2'>Reg. Amount</th>
+            <th className='border-r md:px-2'>Status</th>
           </tr>
         </thead>
         <tbody>
           {
             members.map((member) => (
-              <tr className='border' key={member.id}>
-                <td className='border-r'>{member.id}</td>
+              <tr className='border md:text-sm text-xs' key={member.id}>
+                <td className='border-r text-neutral-200'>{i+=1}.</td>
                 <td className='border-r'>{member.member_no}</td>
                 <td className='border-r'>{member.firstname}</td>
                 <td className='border-r'>{member.secondname}</td>

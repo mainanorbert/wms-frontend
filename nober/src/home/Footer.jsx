@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
     return (
-        <div className='mb-0 flex w-full justify-around mt-10 bg-purple-500'>
+        <div className='mb-0 md:flex grid grid-cols-2 w-full justify-around mt-10 bg-purple-500'>
             <div className=''>
                 <h1 className='text-neutral-300 font-bold'>Quick Links</h1>
                 <ol className='disc-list'>

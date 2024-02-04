@@ -31,8 +31,8 @@ const ContributionList = () => {
   return (
 
     <div className='h-screen bg-purple-600'>
-      <div className='flex w-10/12 justify-center'>
-        <div className='w-8/12 mt-2'>
+      <div className='flex md:w-10/12 justify-center'>
+        <div className='md:w-8/12 mt-2 md:m-1 ml-2'>
           <div>
             <h2 className='text-neutral-300 font-light'> <i className='text-neutral-200 font-bold'>Type: </i> {conttype} </h2>
             <h3 className='text-neutral-300  font-light'> <i className='text-neutral-200 font-bold'>Contribution Id:</i>  {ContId}</h3>
@@ -40,7 +40,7 @@ const ContributionList = () => {
           </div>
           <table className='border w-10/12 table-auto mt-6'>
             <thead>
-              <tr className="font-bold text-neutral-200">
+              <tr className="md:font-bold text-neutral-200">
                 <td className='px-2 border-r'>No.</td>
                 <td className='px-2 border-r'>First Name</td>
                 <td className='px-2 border-r'>Second Name</td>

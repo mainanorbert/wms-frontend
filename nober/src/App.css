@@ -32,22 +32,27 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
-table{
+
+table {
   width: 40%;
 
 }
-.th{
+
+.th {
   background-color: green;
 }
-.td{
+
+.td {
   border-right: blue;
   background-color: blu;
 }
-.tr{
+
+.tr {
   border: blue;
   background-color: palegreen;
 }
@@ -71,18 +76,48 @@ code {
   0% {
     transform: translateX(0);
   }
+
   25% {
     transform: translateX(50px);
   }
+
   50% {
     transform: translateX(100px);
   }
+
   75% {
     transform: translateX(150px);
   }
+
   100% {
     transform: translateX(200px);
   }
+}
+
+@media only screen and (max-width: 600px) {
+  @keyframes moveWords {
+    0% {
+      transform: translateX(0);
+    }
+  
+    25% {
+      transform: translateX(50px);
+    }
+  
+    50% {
+      transform: translateX(100px);
+    }
+  
+    75% {
+      transform: translateX(120px);
+    }
+  
+    100% {
+      transform: translateX(100px);
+    }
+  }
+
+  
 }
 
 .move-words {
@@ -90,44 +125,59 @@ code {
   animation: moveWords 4s infinite linear;
 }
 
-.wel-bg{
+
+
+.wel-bg {
   background: url('./images/dis3.webp') no-repeat;
   background-size: 70%;
 
 }
-.well{
+
+.well {
   background: url('./images/well.jpg') no-repeat;
   background-size: 70%;
 }
+@media only screen and (max-width: 600px) {
+  .wel-bg {
+    background-size: 80%;
+  background: url('./images/dis3.webp') no-repeat;
 
-.par{
+  }
+
+}
+
+.par {
   height: 50px;
   line-height: 50px;
 }
 
-.cont{
+.cont {
   height: 100px;
   line-height: 100px;
 }
-.con{
+
+.con {
   line-height: 40px;
 }
 
 
 
 
-table{
+table {
   width: 40%;
 
 }
-.th{
+
+.th {
   background-color: green;
 }
-.td{
+
+.td {
   border-right: blue;
   background-color: blu;
 }
-.tr{
+
+.tr {
   border: blue;
   background-color: palegreen;
 }

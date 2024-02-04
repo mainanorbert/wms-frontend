@@ -51,7 +51,7 @@ const Members = () => {
 
 
   return (
-    <div className='bg-purple-700 p-4 h-screen relative'>
+    <div className='bg-purple-600 p-4 h-screen relative'>
       <div className=" flex pl-9 ">
         <div className='text-neutral-200 font-bold w-10/12 text-2xl'>Currently Registered Members</div>
       </div>
@@ -72,7 +72,7 @@ const Members = () => {
         {add ?
           <form
             onSubmit={handleSubmit}
-            className=' w-4/12  p-4 border absolute bg-purple-700 z-10'>
+            className=' md:w-4/12 w-10/12  p-4 border absolute bg-purple-700 z-10'>
             <h1 className='text-center text-neutral-100 font-bold text-xl'>Adding a new Member</h1>
             <div className=''>
               <label className='font-bold text-neutral-300'>First Name</label> <br />

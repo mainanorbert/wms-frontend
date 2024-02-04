@@ -26,10 +26,11 @@ const Display = () => {
 onMouseEnter={handleMouseEnter}
 onMouseLeave={handleMouseLeave}
 style={rotateStyle}
-className='moving-words-container ml-[12rem] w-8/12 h-[20rem] wel-bg'>
-<div className=' move-words text-neutral-300 text-2xl p-4 font-bold'>Welfare Management System</div>
+className='moving-words-container md:ml-[12rem] md:w-8/12 w-10/12 md:h-[20rem] h-[15rem] wel-bg'>
+<div className=' move-words text-neutral-300 md:text-2xl p-4 font-bold'>Welfare Management System</div>
 
-<div className=' text-neutral-300 text-lg font-bold absolute top-[10rem] left-[6rem]  flex items-center'
+<div
+className=' text-neutral-300 md:text-lg text-sm md:font-bold absolute md:top-[10rem] top-[6rem] md:left-[6rem] left-[2rem]  flex items-center'
 >
 <Typewriter
             options={{

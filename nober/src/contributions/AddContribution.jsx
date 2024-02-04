@@ -32,9 +32,9 @@ const AddContribution = () => {
 
     return (
         <div className='bg-purple-600 h-screen'>
-            <div className='flex justify-center w-8/12 space-x-4'>
+            <div className='md:flex grid grid-cols-1 ml-2 justify-center md:w-8/12 md:space-x-4'>
                 <form
-                    className='border text-neutral-300 w-4/12 p-2 mt-10'
+                    className='border text-neutral-300 md:w-4/12 w-8/12 mt-4 p-2 mt-10'
                     onSubmit={handleSubmit}
                 >
 
