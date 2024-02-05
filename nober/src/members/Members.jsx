@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import '../App.css'
 import Home from '../home/Home'
 import ShowMembers from './ShowMembers'
+import NavBar from '../home/NavBar'
 
 const Members = () => {
   const [members, setMembers] = useState([])
@@ -51,8 +52,9 @@ const Members = () => {
 
 
   return (
-    <div className='bg-purple-600 p-4 h-screen relative'>
-      <div className=" flex pl-9 ">
+    <div className='bg-purple-600 h-screen relative overflow-auto'>
+<div className='bg-purple-500'><NavBar/></div>
+      <div className=" flex pl-9">
         <div className='text-neutral-200 font-bold w-10/12 text-2xl'>Currently Registered Members</div>
       </div>
       <div className='pl-8 text-xl text-neutral-400'>After Registering and Confirming your Details with Admin Your Details shall Appear Here:</div>

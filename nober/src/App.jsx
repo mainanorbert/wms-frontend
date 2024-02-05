@@ -10,6 +10,8 @@ import Contribution from './contributions/Contribution'
 import ActiveContributions from './contributions/ActiveContributions'
 import AddContribution from './contributions/AddContribution'
 import ContributionList from './contributions/ContributionList'
+import Register from './auth/Register'
+import Login from './auth/Login'
 
 const App = () => {
 
@@ -25,6 +27,8 @@ const App = () => {
           <Route path='/a' element={<ActiveContributions />} />
           <Route path='/addcontribution/:ContId' element={<AddContribution />} />
           <Route path='/addcontribution/:ContId/contributionlist/:ContId' element={<ContributionList />} />
+          <Route path ='/register' element={<Register/>}/>
+          <Route path ='/login' element={<Login/>}/>
 
         </Routes>
 

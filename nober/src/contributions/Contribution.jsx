@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import ActiveContributions from './ActiveContributions'
+import NavBar from '../home/NavBar'
 
 const Contribution = () => {
   const [show, setShow] = useState(false)
@@ -30,8 +31,8 @@ const Contribution = () => {
   }
 
   return (
-    <div className='bg-purple-600'>
-
+    <div className='bg-purple-600 overflow-auto'>
+<NavBar/>
       <div className='flex justify- w-4/12 p-4 relative cursor-pointer' onClick={()=>setShow(!show)} >
         <div className="bg-green-500 hover:bg-green-400 flex items-center con h-[4rem] text-white  flex rounded-xl">
           <p className='font-bold p-2 '>Launch Contribution</p>

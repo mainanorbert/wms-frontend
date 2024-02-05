@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import '../App.css'
 import wms from '../images/wms5.jpg'
+import { Link } from 'react-router-dom'
 
 
 const NavBar = () => {
@@ -18,9 +19,9 @@ const NavBar = () => {
           </svg>
           </button>
             </div>
-              {hide && (  <nav className='w-3/12 md:flex justify-around pt-4'>
-              <div><a>Register</a></div>
-              <div><a>Login</a></div>
+              {hide && (  <nav className='w-3/12 md:flex block md:space-x-0 space-x-1 justify-around pt-4'>
+              <Link className='block' to='/register' >Register</Link>
+              <Link className='block' to='/login'>Login</Link>
           </nav>)}
             </div>
 

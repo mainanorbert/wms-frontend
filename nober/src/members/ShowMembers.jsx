@@ -20,7 +20,8 @@ const ShowMembers = () => {
   }, []);
 
   return (
-    <div className=' '>
+    <div className='h-screen over-flow-y'>
+    
       <table className='table-auto bg-purple-600 md:w-full'>
         <thead>
           <tr key='' className='text-neutral-300 md:text-sm text-xs'>
