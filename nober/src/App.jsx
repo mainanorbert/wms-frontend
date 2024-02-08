@@ -12,6 +12,7 @@ import AddContribution from './contributions/AddContribution'
 import ContributionList from './contributions/ContributionList'
 import Register from './auth/Register'
 import Login from './auth/Login'
+import EditMembers from './members/EditMembers'
 
 const App = () => {
 
@@ -29,6 +30,7 @@ const App = () => {
           <Route path='/addcontribution/:ContId/contributionlist/:ContId' element={<ContributionList />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/members/:Id' element={<EditMembers/>} />
 
         </Routes>
 

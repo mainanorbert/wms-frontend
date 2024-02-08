@@ -10,10 +10,10 @@ import axiosClient from '../AxiosClient'
 
 
 const Members = () => {
-  const [members, setMembers] = useState([])
+  const [members, setMembers] = useState({})
   const [add, setAdd] = useState(false)
-  const {user, token} = useAuth()
-  
+  const { user, token } = useAuth()
+
 
   const [firstname, setFirstname] = useState('')
   const [secondname, setSecondname] = useState('')
@@ -58,38 +58,38 @@ const Members = () => {
     }
   }
   useEffect(() => {
-    if (isErr){
+    if (isErr) {
       const timer = setTimeout(() => {
         setIsErr(false)
-        
+
       }, 4000);
-      return ()=>clearInterval(timer)
+      return () => clearInterval(timer)
     }
   }, [isErr]);
 
 
   return (
     <div className='bg-purple-600 h-screen relative overflow-auto'>
-<div className='bg-purple-500'><NavBar/></div>
+      <div className='bg-purple-500'><NavBar /></div>
       <div className=" flex md:pl-9 md:ml-6">
         <div className='text-neutral-200 font-bold w-10/12 text-2xl'>Currently Registered Members</div>
       </div>
 
       <div className='md:pl-2 text-xl text-neutral-400 flex justify-around'>
-      <div>After Registering and Confirming your Details with Admin Your Details shall Appear Here:</div>
-      <div title='Go Home'><Link to='/'><svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-8 h-8">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-    </svg></Link></div>
+        <div>After Registering and Confirming your Details with Admin Your Details shall Appear Here:</div>
+        <div title='Go Home'><Link to='/'><svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-8 h-8">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg></Link></div>
       </div>
 
       <div className='p-4'>
-       {token && user === 'nober'?  <button
-       onClick={() => setAdd(!add)}
-       className='flex bg-green-600 rounded-xl px-3' title='New Member'>
-       <svg xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-10 h-10">
-         <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
-       </svg>
-     </button>:''}
+        {token && user === 'nober' ? <button
+          onClick={() => setAdd(!add)}
+          className='flex bg-green-600 rounded-xl px-3' title='New Member'>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="green" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-10 h-10">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+          </svg>
+        </button> : ''}
 
       </div>
 
@@ -98,7 +98,7 @@ const Members = () => {
           <form
             onSubmit={handleSubmit}
             className=' md:w-4/12 w-10/12 p-2 border absolute bg-purple-700 z-10'>
-            {isErr? <div className='bg-red-700 rounded text- a text-white text-center w-full'>All Fields are Required</div>:''}
+            {isErr ? <div className='bg-red-700 rounded text- a text-white text-center w-full'>All Fields are Required</div> : ''}
             <h1 className='text-center text-neutral-100 font-bold text-xl'>Adding a new Member</h1>
             <div className=''>
               <label className='font-bold text-xs text-neutral-300'>First Name</label> <br />
