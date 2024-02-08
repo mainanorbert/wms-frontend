@@ -37,7 +37,7 @@ className=' text-neutral-300 md:text-lg text-sm md:font-bold absolute md:top-[10
               strings: [
                 "We Ensure Every Contribution Counts",
                 "Access Financial Records instantly by Phone",
-                "Automated Welfare with Minimal Human Interaction"
+                "Automation with Minimal Human Interaction"
               ],
               autoStart: true,
               loop: true,

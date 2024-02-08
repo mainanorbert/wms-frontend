@@ -86,11 +86,11 @@ code {
   }
 
   75% {
-    transform: translateX(150px);
+    transform: translateX(100px);
   }
 
   100% {
-    transform: translateX(200px);
+    transform: translateX(150px);
   }
 }
 
@@ -105,15 +105,15 @@ code {
     }
   
     50% {
-      transform: translateX(100px);
+      transform: translateX(60px);
     }
   
     75% {
-      transform: translateX(120px);
+      transform: translateX(50px);
     }
   
     100% {
-      transform: translateX(100px);
+      transform: translateX(50px);
     }
   }
 

@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import axiosClient from '../AxiosClient'
 
 const ActiveContributions = () => {
   const [contributions, setContributions] = useState([])
@@ -10,7 +11,9 @@ const ActiveContributions = () => {
   useEffect(() => {
     const getContributions = async () => {
       try {
-        const res = await axios.get('http://127.0.0.1:8000/api/cont/contributions/');
+        // const res = await axios.get('http://127.0.0.1:8000/api/cont/contributions/');
+        const res = await axiosClient.get('/cont/contributions/')
+
         setContributions(res.data)
         console.log('response:', res.data)
 
@@ -27,7 +30,7 @@ const ActiveContributions = () => {
         These are the Active Contributions Running in our Welfare
       </div>
       <div className=' flex justify-center gap-3 p-4'>
-        <div className='md:grid md:grid-cols-4 md:gap-8 md:w-10/12 '>
+        <div className='md:grid md:grid-cols-3 md:gap-8 md:w-10/12 '>
           {contributions.map((contribution) => (
             <div key={contribution.id}
               className='border bg-purple-800 rounded p-1 m-2'>

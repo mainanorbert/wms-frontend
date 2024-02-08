@@ -27,8 +27,8 @@ const App = () => {
           <Route path='/a' element={<ActiveContributions />} />
           <Route path='/addcontribution/:ContId' element={<AddContribution />} />
           <Route path='/addcontribution/:ContId/contributionlist/:ContId' element={<ContributionList />} />
-          <Route path ='/register' element={<Register/>}/>
-          <Route path ='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
 
         </Routes>
 

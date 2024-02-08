@@ -1,12 +1,14 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
+import axiosClient from '../AxiosClient'
 
 const ContributionList = () => {
   const { ContId } = useParams()
   const [contlist, setContList] = useState([])
   const [des, setDes] = useState('')
   const [conttype, setContType] = useState('')
+  const[totalAmount, setTotalAmount] =useState(0)
   let i = 0
 
 
@@ -14,11 +16,13 @@ const ContributionList = () => {
     const contList = async () => {
       try {
 
-        const res = await axios.get(`http://127.0.0.1:8000/api/cont/allcontributions/${ContId}/contribution_list`)
+        const res = await axiosClient.get(`http://127.0.0.1:8000/api/cont/allcontributions/${ContId}/contribution_list`)
         setContList(res.data)
         setDes(res.data[0].cont_des)
         setContType(res.data[0].cont_type)
-        console.log(res.data)
+         setTotalAmount(res.data[res.data.length-1].total_amount)
+        setTotalAmount(total);
+        
       }
       catch (e) {
 
@@ -26,7 +30,7 @@ const ContributionList = () => {
     }
     contList()
   }, [ContId])
-  console.log(des)
+  console.log('ttt', totalAmount)
 
   return (
 
@@ -61,6 +65,7 @@ const ContributionList = () => {
                   </tr>
                 ))
               }
+              <tr className='' key=""><td></td> <td></td><td className='font-bold text-lg text-neutral-300'>Total Amount: </td> <td></td> <td className='p-1 underline font-bold text-neutral-200'>{totalAmount}</td></tr>
             </tbody>
           </table>
         </div>

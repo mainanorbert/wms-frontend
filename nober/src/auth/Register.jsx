@@ -13,31 +13,32 @@ const Register = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [iserror, setIsError] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault()
 
-        if (name === '' || email === '' || password === '' || passwordConf === '') {
+        if (name === '' || email === '' || password === '') {
             setErrorMessage('All fields are required')
             setIsError(true);
         }
         else {
             const payload = {
-                name: name,
+                username: name,
                 email: email,
                 password: password,
-                password_confirmation: passwordConf
+                
             }
-            axiosClient.post('/register', payload)
-                .then((response) => {
-                    console.log(response.data.token)
-                    navigate('/login');
 
-                })
-                .catch((error) => {
-                    setErrorMessage(error.response.data.message)
-                    setIsError(true);
-                    console.log(error);
-                })
+            try {
+
+            const res = await axios.post('http://127.0.0.1:8000/auth/users/', payload)
+            navigate('/login')
+           
+
+            } catch(e){
+
+            }
+
+               
 
         }
 
@@ -55,7 +56,7 @@ const Register = () => {
         setShowPass(!showPass);
     }
     return (
-        <div className="w-full grid place-items-center pb-6 h-screen bg-purple-600" >
+        <div className="w-full grid   place-items-center pb-6 h-screen bg-purple-600" >
             <form className='md:w-3/12 w-8/12 relative border p-2 grid' onSubmit={handleSubmit} >
                 {iserror && (<motion.div
                     initial={{ sclae: 0, y: 0 }}
@@ -65,7 +66,14 @@ const Register = () => {
                     {errorMessage}
 
                 </motion.div>)}
+                
+                <div className='flex justify-around'>
                 <p className='text-center text-xl text-neutral-300 font-bold'>Register Here</p>
+               <p className='' title='Home'> <Link to='/'><svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-8 h-8">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+             </svg>
+             </Link></p>
+                </div>
                 <div className='p-2'>
                     <label className='text-neutral-300 font-bold '>Username</label><br />
                     <input
@@ -90,15 +98,7 @@ const Register = () => {
                         onChange={(e) => setPassword(e.target.value)}
                         className=' w-full p-1  h-8 border rounded border bg-transparent outline-none text-neutral-200 font-ligh' />
                 </div>
-                <div className='p-2'>
-                    <label className='text-neutral-300 font-bold'>Confirm Password</label><br />
-                    <input
-                        type={showPass ? 'text' : 'password'}
-                        name='password_confirmation'
-                        onChange={(e) => setPasswordConf(e.target.value)}
-
-                        className='w-full p-1  h-8  border rounded border bg-transparent outline-none text-neutral-200 font-ligh' />
-                </div>
+                
                 <div className='text-white p-2'>
                     <input type="checkbox"
                         checked={showPass}
@@ -113,6 +113,7 @@ const Register = () => {
                 </div>
 
             </form>
+           
         </div>
     )
 }
