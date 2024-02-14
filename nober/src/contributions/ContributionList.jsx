@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import axiosClient from '../AxiosClient'
+import { Link } from 'react-router-dom'
 
 const ContributionList = () => {
   const { ContId } = useParams()
@@ -9,7 +10,7 @@ const ContributionList = () => {
   const [des, setDes] = useState('')
   const [conttype, setContType] = useState('')
   const[totalAmount, setTotalAmount] =useState(0)
-  let i = 0
+  let i = 1
 
 
   useEffect(() => {
@@ -22,7 +23,6 @@ const ContributionList = () => {
         setContType(res.data[0].cont_type)
          setTotalAmount(res.data[res.data.length-1].total_amount)
         setTotalAmount(total);
-        
       }
       catch (e) {
 
@@ -35,7 +35,11 @@ const ContributionList = () => {
   return (
 
     <div className='h-screen bg-purple-600'>
+    <div className='flex'>
+    <p className='p-4 bg-gree-300' title='To Contributions'><Link className='bg-green-600 font-bold rounded-xl p-1 text-neutral-300' to='/contributions'>Back</Link></p>
+    </div>
       <div className='flex md:w-10/12 justify-center'>
+      
         <div className='md:w-8/12 mt-2 md:m-1 ml-2'>
           <div>
             <h2 className='text-neutral-300 font-light'> <i className='text-neutral-200 font-bold'>Type: </i> {conttype} </h2>

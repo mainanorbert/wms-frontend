@@ -13,6 +13,11 @@ import ContributionList from './contributions/ContributionList'
 import Register from './auth/Register'
 import Login from './auth/Login'
 import EditMembers from './members/EditMembers'
+import Pag from './members/Pag';
+import SubmitDetails from './mpesa/SubmitDetails';
+import Landing from './others/Landing';
+import Donations from './donations/Donations';
+import Accounting from './accounting/Accounting';
 
 const App = () => {
 
@@ -30,7 +35,12 @@ const App = () => {
           <Route path='/addcontribution/:ContId/contributionlist/:ContId' element={<ContributionList />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/members/:Id' element={<EditMembers/>} />
+          <Route path='/members/:Id' element={<EditMembers />} />
+          <Route path='/pag' element={<Pag />} />
+          <Route path='/mpesa/:ContId' element={<SubmitDetails />} />
+          <Route path='/about' element={<Landing />} />
+          <Route path='/donations' element={<Donations />} />
+          <Route path='/accounting' element={<Accounting />} />
 
         </Routes>
 
