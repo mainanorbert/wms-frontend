@@ -26,7 +26,7 @@ const Display = () => {
 onMouseEnter={handleMouseEnter}
 onMouseLeave={handleMouseLeave}
 style={rotateStyle}
-className='moving-words-container md:ml-[12rem] md:w-8/12 w-10/12 md:h-[20rem] h-[15rem] wel-bg'>
+className='moving-words-container md:ml-[12rem]  md:w-8/12 w-10/12 md:h-[20rem] h-[15rem] wel-bg'>
 <div className=' move-words text-neutral-300 md:text-2xl p-4 font-bold'>Welfare Management System</div>
 
 <div

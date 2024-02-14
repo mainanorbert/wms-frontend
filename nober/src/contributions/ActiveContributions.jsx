@@ -25,12 +25,12 @@ const ActiveContributions = () => {
     getContributions()
   }, [])
   return (
-    <div>
+    <div className='bg-purple-600 h-screen verflow-y-scroll'>
       <div className='text-center font-bod text-2xl text-neutral-200'>
         These are the Active Contributions Running in our Welfare
       </div>
       <div className=' flex justify-center gap-3 p-4'>
-        <div className='md:grid md:grid-cols-3 md:gap-8 md:w-10/12 '>
+        <div className='md:grid md:grid-cols-4 md:gap-8 md:w-10/12 '>
           {contributions.map((contribution) => (
             <div key={contribution.id}
               className='border bg-purple-800 rounded p-1 m-2'>
@@ -44,6 +44,7 @@ const ActiveContributions = () => {
                   <i className='text-yellow-200 font-light'>{contribution.description}</i>
                 </p>
               </Link>
+              
             </div>
           ))}
         </div>

@@ -8,27 +8,27 @@ const Footer = () => {
             <div className=''>
                 <h1 className='text-neutral-300 font-bold'>Quick Links</h1>
                 <ol className='disc-list'>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Donations</a></li>
-                    <li><a href="">Membership</a></li>
+                    <li><Link to="">Home</Link></li>
+                    <li><Link to='/about'>About</Link></li>
+                    <li><Link to="">Donations</Link></li>
+                    <li><Link to="">Membership</Link></li>
                 </ol>
             </div>
             <div className=''>
                 <h1 className='text-neutral-300 font-bold'>More Contacts</h1>
                 <ol className='disc-list'>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Donations</a></li>
-                    <li><a href="">Membership</a></li>
+                    <li><Link to="">Home</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="">Donations</Link></li>
+                    <li><Link to="">Membership</Link></li>
                 </ol>
             </div>
             <div className=''>
                 <h1 className='text-neutral-300 font-bold'>Social Media</h1>
-                    <div><a href="https://web.facebook.com/?_rdc=1&_rdr" target={'_blank'}  ></a>FaceBook</div>
-                    <div><a href="https://www.instagram.com/" target={'_blank'}  >Instagram</a></div>
-                    <div><a href="https://web.whatsapp.com/" target={'_blank'} >Whatsapp</a></div>
-                    <div><a href="https://twitter.com/mainanorbert2" target={'_blank'} >Twitter</a></div>
+                    <div><Link to="https://web.facebook.com/?_rdc=1&_rdr" target={'_blank'}  ></Link>FaceBook</div>
+                    <div><Link to="https://www.instagram.com/" target={'_blank'}  >Instagram</Link></div>
+                    <div><Link to="https://web.whatsapp.com/" target={'_blank'} >Whatsapp</Link></div>
+                    <div><Link to="https://twitter.com/mainanorbert2" target={'_blank'} >Twitter</Link></div>
 
 
             </div>
