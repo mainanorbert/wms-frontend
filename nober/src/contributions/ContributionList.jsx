@@ -4,8 +4,17 @@ import { useParams } from 'react-router'
 import axiosClient from '../AxiosClient'
 import { Link } from 'react-router-dom'
 
+/**
+ * Displays a list of contributions for a specific contribution ID.
+ * Fetches contribution data from the backend API and renders it in a table format.
+ * @returns {JSX.Element} - The rendered component.
+ */
+
+
+
+
 const ContributionList = () => {
-  const { ContId } = useParams()
+  const { ContId } = useParams() // Get the contribution ID from the URL params
   const [contlist, setContList] = useState([])
   const [des, setDes] = useState('')
   const [conttype, setContType] = useState('')
@@ -13,6 +22,7 @@ const ContributionList = () => {
   let i = 1
 
 
+  // Fetch contribution data from the backend API when the component mounts
   useEffect(() => {
     const contList = async () => {
       try {

@@ -3,6 +3,12 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axiosClient from '../AxiosClient'
 
+
+/**
+ * ActiveContributions component displays a list of active contributions in the welfare system.
+ * It fetches the contributions from the backend API and renders them as clickable items.
+ */
+
 const ActiveContributions = () => {
   const [contributions, setContributions] = useState([])
 
@@ -24,8 +30,9 @@ const ActiveContributions = () => {
     }
     getContributions()
   }, [])
+  // Render the component
   return (
-    <div className='bg-purple-600 h-screen verflow-y-scroll'>
+    <div className='bg-purple-400 h-screen verflow-y-scroll'>
       <div className='text-center font-bod text-2xl text-neutral-200'>
         These are the Active Contributions Running in our Welfare
       </div>
@@ -40,9 +47,9 @@ const ActiveContributions = () => {
                 <h3 className='font-bold text-neutral-300 mt-1'>Contribution ID:
                   <i className='rounded-full font-light text-yellow-300 py-1 p-1 border text-white'> {contribution.contribution_number}</i>
                 </h3>
-                <p className='font-bold text-neutral-300 mt-1'> Description:
-                  <i className='text-yellow-200 font-light'>{contribution.description}</i>
-                </p>
+                <div className='font-bold text-neutral-300 mt-1 content-none'> Description:
+                  <i className='text-yellow-200 font-light whitespace-norma '>{contribution.description}</i>
+                </div>
               </Link>
               
             </div>

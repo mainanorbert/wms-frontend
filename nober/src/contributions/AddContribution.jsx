@@ -13,6 +13,11 @@ const AddContribution = () => {
     const [memberNo, setMemberNo] = useState(null)
     const { user, token } = useAuth()
     const navigate = useNavigate()
+    /**
+     * Handles the form submission for adding a new contribution.
+     * Validates the form fields and sends a POST request to the backend API.
+     * Navigates to the contribution list page upon successful submission.
+     */
 
     const handleSubmit = (e) => {
         e.preventDefault()

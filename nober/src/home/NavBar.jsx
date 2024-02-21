@@ -72,7 +72,7 @@ const NavBar = () => {
           </button>
         </div>
         {hide && (<nav className='w-3/12 md:flex block md:space-x-0 space-x-1 justify-around pt-4'>
-          {token ? <div className='flex justify-between w-10/12'>
+          {token ? <div className='md:flex justify-between md:w-10/12 pl-'>
             <div>Welcome, {u}</div>
             
             <div className='text-blue-800 text-sm '> <button className='hover:underline' onClick={handleLogout}>logout</button></div>

@@ -4,6 +4,13 @@ import axios from 'axios'
 import axiosClient from '../AxiosClient'
 import { useAuth } from '../ContextProvider'
 
+
+/**
+ * Component for displaying accounting information.
+ * 
+ * Displays overall breakdown and per contribution breakdown.
+ */
+
 const Accounting = () => {
     const [contAmount, setContAmount] = useState(0)
     const [membershipAmount, setMembershipAmount] = useState(0)
@@ -27,7 +34,7 @@ const Accounting = () => {
             }
         }
         ShowAccounts()
-    })
+    }, [])
 
     useEffect(() => {
         const ShowPerId = async () => {
@@ -43,11 +50,11 @@ const Accounting = () => {
             }
         }
         ShowPerId()
-    })
+    }, [])
     return (
         <div className='h-screen overflow-y-auto bg-purple-500'>
-            <div><NavBar /></div>
-            <div className='text-center font-bold text-neutral-200 text-4xl'>Welcome to Admin Panel</div>
+            <div className='bg-purple-400'><NavBar /></div>
+            <div className='text-center bg-purple-30 font-bold text-neutral-200 text-4xl'>Welcome to Admin Panel</div>
             <div className='text-xl ml-12'>Get Breakdowns of Various Welfare Activities and running contributions breakdowns</div>
             <div className='md:flex justify-center bg-geen-500 space-x-0 mt-'>
 

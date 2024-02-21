@@ -17,8 +17,8 @@ const ShowMembers = () => {
   useEffect(() => {
     const fetchMembers = async () => {
       try {
-        // const res = await axios.get('http://127.0.0.1:8000/api/members/');
-        const res = await axiosClient.get('/members/')
+        const res = await axios.get('http://127.0.0.1:8000/api/members/');
+        // const res = await axiosClient.get('http://100.26.236.42/api/members/')
         console.log(res.data.total_amount)
         setAmount(res.data.total_amount)
         setMembers(res.data.members);
@@ -32,7 +32,7 @@ const ShowMembers = () => {
   return (
     <div className='h-screen over-flow-y'>
 
-      <table className='table-auto bg-purple-600 md:w-full'>
+      <table className='table-auto bg-purple-900 md:w-full'>
         <thead>
           <tr key='' className='text-neutral-300 md:text-sm text-xs'>
             <th className='border-r md:px-1'>No.</th>

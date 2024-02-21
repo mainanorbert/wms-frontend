@@ -19,7 +19,7 @@ const Pages = () => {
     <div className='flex w-full justify-center md:pl-[4rem] mt-4'>
       <div className='md:grid md:grid-cols-3 gap-2 w-full md:space-y-0 ml-10 md:ml-0 space-y-2 '>
 
-        <div className='wel bg-purple-900 w-8/12 h-[18rem]'>
+        <div className='wel bg-purple-900 w-8/12 h-[18rem] rounded-xl'>
           <Link to='/members'>
             <h3 className='text-center text-neutral-200 p-1 space-x-1 flex justify-around text-xl pb- border-bottom border-b font-bold'>
               <img className='md:w-8/12' src={member} alt="" />
@@ -50,7 +50,7 @@ const Pages = () => {
         <motion.div
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className=' bg-purple-900 w-8/12 h-[18rem] '>
+          className=' bg-purple-900 w-8/12 h-[18rem] rounded-xl '>
           <Link to='/donations'>
 
             <h3 className='text-center  bg flex justify-center p-1 text-neutral-400 font-bold '>
@@ -73,12 +73,12 @@ const Pages = () => {
           variants={rotVariants}
           initial="initial"
           whileHover="hover"
-          className='w-8/12  h-[18rem] w-4/12 bg-purple-900'>
-          <h3 className='flex p-1 justify-center  text-neutral-200'>
+          className='w-8/12  h-[18rem] w-4/12 bg-purple-900 rounded-xl'>
+          <h3 className='flex p-1 justify-center rounded-xl bg-green-  text-neutral-200'>
             <img src={mem} alt="" />
           </h3>
 
-          <div className='list-disc p-2 mb- md:mb- text-sm space-y-1 font-bold text-neutral-200'>
+          <div className='list-disc p-2 mb- md:mb- bg-gre0 text-sm space-y-1 font-bold text-neutral-200'>
             <li>Accountability</li>
             <li>No handling of Cash</li>
             <li>Access to financial Records</li>

@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 const Landing = () => {
     return (
-        <div className='bg-purple-500 h-screen overflow-y-scroll'>
+        <div className='bg-purple-400 h-screen overflow-y-scroll'>
 
             <div className=''>
                 <nav className='font-bold flex justify-end text-blue-900 space-x-4 p-4 '>
@@ -38,20 +38,21 @@ const Landing = () => {
                     <div className='text-yellow-200 bg-green-400 w-2/12 md:w-1/12 mt-3 text-center hover:green-500 hover:text-white p-2 font-bold rounded-xl'>
                     <Link to='/'>Visit Now</Link></div>
                 </div>
-                <div className='grid md:grid-cols-2 gap-2  justify-around w-8 mb-4 ml-12 w-9/12 mt-4'>
+                <div 
+                className='md:grid md:space-y-0 space-y-8 md:grid-cols-2 gap-2  justify-around mb-4 ml-12 w-9/12 mt-4'>
                     <div></div>
                     <motion.div
                         whileHover={{
                             rotate: 20
                         }}
                         transition={{ duration: 4 }}
-                        className='border rounded w-[25rem] pl-4'>
+                        className='border rounded md:w-[25rem] bg-purple-500 pl-4'>
                         <h1 className='text-yellow-200 font-bold text-xl'>What We Do</h1>
-                        <div className='mt-2 text-neutral-200'> We Ease Management of Welfares</div>
-                        <div className='mt-3 mt-2 text-neutral-200'>Centrally Managing Eligible Members List Matters</div>
-                        <div className='mt-3 mt-2 text-neutral-200'>Real Time Update of Contributions Made</div>
-                        <div className='mt-3 mt-2 text-neutral-200'>Automated Payment and Immediate Enlisting</div>
-                        <div className='mt-3 mt-2 text-neutral-200'>We take Pride in managing your funds efficiently</div>
+                        <div className='mt-2 text-neutral-200'> We Ease Management of Welfares.</div>
+                        <div className='mt-3 mt-2 text-neutral-200'>Centrally Managing Eligible Members List Matters.</div>
+                        <div className='mt-3 mt-2 text-neutral-200'>Real Time Update of Contributions Made.</div>
+                        <div className='mt-3 mt-2 text-neutral-200'>Automated Payment and Immediate Enlisting.</div>
+                        <div className='mt-3 mt-2 text-neutral-200'>We take Pride in managing your funds efficiently.</div>
                     </motion.div>
 
 
@@ -60,13 +61,13 @@ const Landing = () => {
                             scale: 1.1
                         }}
                         whileTap={{ scale: 2 }}
-                        className='border rounded pl-4 w-[25rem]'>
+                        className='border rounded pl-4 md:w-[25rem] bg-purple-500'>
                         <h1 className='text-yellow-200 font-bold text-xl'>Ultimate Benefits</h1>
-                        <div className='mt-3 mt-2 text-neutral-200'>Accountability in Fund Management</div>
-                        <div className='mt-3 mt-2 text-neutral-200'>Efficiency in Participating in Welfare Activities</div>
-                        <div className='mt-3 mt-2 text-neutral-200'>Increasing Trust Between Leadership and Membership</div>
-                        <div className='mt-3 mt-2 text-neutral-200'>Increasing Membership</div>
-                        <div className='mt-3 mt-2 text-neutral-200'>Reaching out to More Members</div>
+                        <div className='mt-3 mt-2 text-neutral-200'>Accountability in Fund Management.</div>
+                        <div className='mt-3 mt-2 text-neutral-200'>Efficiency in Participating in Welfare Activities.</div>
+                        <div className='mt-3 mt-2 text-neutral-200'>Increasing Trust Between Leadership and Membership.</div>
+                        <div className='mt-3 mt-2 text-neutral-200'>Increasing Membership.</div>
+                        <div className='mt-3 mt-2 text-neutral-200'>Reaching out to More Members.</div>
                     </motion.div>
                     <div></div>
                 </div>
@@ -74,8 +75,8 @@ const Landing = () => {
                     <div className='bg-green-00 w-6/12'>
                         <h1 className='bg-green-00 text-center font-bold text-3xl text-yellow-200'>How to use the system</h1>
                         <div className='md:grid space-y-3 grid-cols-3 gap-1 place-content-center p-2 gap-10'>
-                            <div className='border p-1'>
-                                <div className='text-yellow-200 flex justify-between  mb-4 font-bold'>
+                            <div className='border p-1 bg-purple-500'>
+                                <div className='text-yellow-200  flex justify-between  mb-4 font-bold'>
                                     <p>step 1</p>
                                     <p className='animate-ping'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -84,7 +85,7 @@ const Landing = () => {
                                 </div>
                                 <p className='text-neutral-200'>Pay Registration Fee</p>
                             </div>
-                            <div className='border p-1'>
+                            <div className='border p-1 bg-purple-500'>
                                 <div className='text-yellow-200 flex justify-between  mb-4 font-bold'>
                                     <p>step 2</p>
                                     <p className='animate-ping'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -94,7 +95,7 @@ const Landing = () => {
                                 </div>
                                 <p className='text-neutral-200'>Contact Admin for member activation</p>
                             </div>
-                            <div className='border p-1'>
+                            <div className='border p-1 bg-purple-500'>
                                 <div className='text-yellow-200 flex justify-between  mb-4 font-bold'>
                                     <p>step 3</p>
                                     <p className='animate-ping'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -104,7 +105,7 @@ const Landing = () => {
                                 </div>
                                 <p className='text-neutral-200'>Check to confirm your Registration status in members list</p>
                             </div>
-                            <div className='border p-1'>
+                            <div className='border p-1 bg-purple-500'>
                                 <div>
                                     <div className='text-yellow-200 flex justify-between  mb-4 font-bold'>
                                         <p>step 4</p>

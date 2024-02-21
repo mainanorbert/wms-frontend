@@ -4,6 +4,12 @@ import { motion } from 'framer-motion'
 import axios from 'axios'
 import { useAuth } from '../ContextProvider'
 
+/**
+ * Displays a login form and handles user authentication.
+ * Uses the useAuth context for authentication state and actions.
+ * @returns {JSX.Element} - The rendered component.
+ */
+
 const Login = () => {
   const navigate = useNavigate()
   const [showPass, setShowPass] = useState(false);
