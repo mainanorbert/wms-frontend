@@ -2,8 +2,7 @@
 
 ## Overview
 
-Briefly introduce your project, including its purpose, key features, and any relevant background information. Provide a high-level overview to help readers understand the context of your project.
-
+Transparency and accountability have been my driving force in learning SE. Having noticed the inefficiencies of managing welfare activities in the village, I decided to come up with a Welfare Management System (WMS). The purpose of my PROJECT is to empower communities through the development of a system that aims to facilitate transparent contributions, accountable financial management, and seamless interaction among community members. By providing a platform for managing welfare contributions, donations, and financial activities, the WMS seeks to address the challenges associated with manual record-keeping, such as inefficiencies, lack of transparency, and difficulties in maintaining accurate financial records. The project aims to streamline and automate these processes, fostering transparency, accountability, and ease of access to welfare-related information. Through the integration of the Mpesa API for automated transactions, the WMS further enhances its functionality, enabling users to make contributions and transactions more conveniently. Overall, the purpose of the project is to improve the welfare management process within communities, promoting efficiency, transparency, and accountability.
 ### Table of Contents
 
 - [Installation](#installation)
@@ -25,8 +24,8 @@ Briefly introduce your project, including its purpose, key features, and any rel
  - `typewritter-effect`,
  - `npm install @fortawesome/free-brands-svg-icons`
  - `npm install 	@fortawesome/react-fontawesome`
- 2. Install the [django backend for the project](https://github.com/mainanorbert/Welfare_Management_System/tree/main)
-
+ 4. Install the [django backend for wms](https://github.com/mainanorbert/Welfare_Management_System/tree/main)
+ 5. After instaling backend, run `npm run dev` to start your frontend server.
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
