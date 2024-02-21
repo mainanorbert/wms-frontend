@@ -10,6 +10,7 @@ Transparency and accountability have been my driving force in learning SE. Havin
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [License](#license)
+- [More](#more)
 
 ### Installation
 
@@ -37,3 +38,8 @@ Currently, two official plugins are available:
 
 ### License
 No License
+
+### More
+- Read [blog](https://gist.github.com/mainanorbert/e7ff15c322f1c2bfa6d6a957750f81b5) on this project
+- Hosted project can be found [Here](https://wms.nobertechx.xyz/)
+- [Twitter](https://twitter.com/mainanorbert2)
