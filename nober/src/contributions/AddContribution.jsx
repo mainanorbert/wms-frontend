@@ -30,7 +30,7 @@ const AddContribution = () => {
                 amount: amount,
                 member_no: memberNo
             }
-            axiosClient.post('http://127.0.0.1:8000/api/cont/allcontributions/', payload)
+            axiosClient.post('/cont/allcontributions/', payload)
                 .then((data) => {
                     console.log("success")
                     navigate(`/addcontribution/${ContId}/contributionlist/${ContId}`)

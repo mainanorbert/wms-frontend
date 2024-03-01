@@ -1,5 +1,6 @@
 import { useContext, createContext, useState, useEffect } from "react";
 import axios from "axios";
+import axiosClient from "./AxiosClient";
 
 const AuthContext = createContext({
     user: null
@@ -15,7 +16,7 @@ const AuthProvider = ({ children }) => {
     const login = async (payload) => {
 
         try {
-            const res = await axios.post('http://127.0.0.1:8000/auth/token/login', payload)
+            const res = await axiosClient.post('/auth/token/login/', payload)
             console.log(res.data)
             setToken(res.data.auth_token)
             localStorage.setItem('ACCESS_TOKEN', res.data.auth_token)
@@ -44,7 +45,7 @@ const AuthProvider = ({ children }) => {
     const logout = () => {
         localStorage.removeItem('ACCESS_TOKEN')
         setToken(null);
-        setUser(null);
+        setUser({});
     }
     return (
         <AuthContext.Provider value={{ token, err, user, setUser, login, logout }}>

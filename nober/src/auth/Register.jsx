@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import axios from 'axios'
+import axiosClient from '../AxiosClient'
 
 const Register = () => {
     const navigate = useNavigate()
@@ -30,7 +31,7 @@ const Register = () => {
 
             try {
 
-            const res = await axios.post('http://127.0.0.1:8000/auth/users/', payload)
+            const res = await axiosClient.post('/auth/users/', payload)
             navigate('/login')
            
 
@@ -101,6 +102,7 @@ const Register = () => {
                 
                 <div className='text-white p-2'>
                     <input type="checkbox"
+                            name ='checkbox'
                         checked={showPass}
                         onChange={handleShowPassword}
                     />

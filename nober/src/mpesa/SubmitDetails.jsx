@@ -20,7 +20,7 @@ const SubmitDetails = () => {
                 phone_number: phone_number,
                 amount: amount,
             }
-            axios.post('http://127.0.0.1:8000/mpesa/submit/', payload)
+            axios.post('http://100.25.196.173/mpesa/submit/', payload)
             .then((res)=>{
                 console.log('res:', res.data.transaction_id)
                 const pl ={

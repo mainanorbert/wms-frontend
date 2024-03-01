@@ -27,7 +27,7 @@ const ContributionList = () => {
     const contList = async () => {
       try {
 
-        const res = await axiosClient.get(`http://127.0.0.1:8000/api/cont/allcontributions/${ContId}/contribution_list`)
+        const res = await axiosClient.get(`/cont/allcontributions/${ContId}/contribution_list`)
         setContList(res.data)
         setDes(res.data[0].cont_des)
         setContType(res.data[0].cont_type)
@@ -46,7 +46,8 @@ const ContributionList = () => {
 
     <div className='h-screen bg-purple-600'>
     <div className='flex'>
-    <p className='p-4 bg-gree-300' title='To Contributions'><Link className='bg-green-600 font-bold rounded-xl p-1 text-neutral-300' to='/contributions'>Back</Link></p>
+    <p className='p-4 bg-gree-300' title='To Contributions'>
+    <Link className='bg-green-600 font-bold rounded-xl p-1 text-neutral-300' to={`/addcontribution/${ContId}`}>Back</Link></p>
     </div>
       <div className='flex md:w-10/12 justify-center'>
       

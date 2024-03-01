@@ -23,7 +23,7 @@ const Accounting = () => {
     useEffect(() => {
         const ShowAccounts = async () => {
             try {
-                const res = await axiosClient.get("http://127.0.0.1:8000/acc/accounting/")
+                const res = await axiosClient.get("/acc/accounting/")
                 setContAmount(res.data.cont_amount)
                 setMembershipAmount(res.data.membership_amount)
                 setTotal(res.data.totals)
@@ -39,7 +39,7 @@ const Accounting = () => {
     useEffect(() => {
         const ShowPerId = async () => {
             try {
-                const r = await axiosClient.get("http://127.0.0.1:8000/acc/perId/")
+                const r = await axiosClient.get("/acc/perId/")
                 setPerId(r.data.cont_data)
                 setContTotal(r.data.total_contribution)
 

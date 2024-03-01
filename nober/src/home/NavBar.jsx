@@ -4,6 +4,7 @@ import wms from '../images/wms5.jpg'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../ContextProvider'
 import axios from 'axios'
+import axiosClient from '../AxiosClient'
 
 
 
@@ -17,7 +18,7 @@ const NavBar = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const userRes = await axios.get('http://127.0.0.1:8000/auth/users/me/', {
+        const userRes = await axiosClient.get('/auth/users/me/', {
           headers: {
             Authorization: `Token ${token}`,
           },
@@ -37,7 +38,7 @@ const NavBar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://127.0.0.1:8000/auth/token/logout/', null, {
+      await axiosClient.post('/auth/token/logout/', null, {
         headers: {
           Authorization: `Token ${token}`,
         },

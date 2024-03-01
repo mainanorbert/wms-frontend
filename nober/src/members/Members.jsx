@@ -48,8 +48,8 @@ const Members = () => {
 
       }
       http://100.26.236.42/api/
-      // axiosClient.post('http://127.0.0.1:8000/api/members/', payload)
-      axios.post('http://100.26.236.42/api/members/', payload)
+      // axiosClient.post('http://127.0/api/members/', payload)
+      axiosClient.post('/members/', payload)
         .then((data) => {
           console.log(data)
           window.location.reload()
@@ -73,7 +73,7 @@ const Members = () => {
   return (
     <div className='bg-purple-300 h-screen relative overflow-auto'>
       <div className='bg-purple-00'><NavBar /></div>
-      <div className=" flex md:pl-9 md:ml-6">
+      <div className=" flex md:pl-6 md:ml- justify-around">
         <div className='text-neutral-100 font-bold w-10/12 text-2xl'>Currently Registered Members</div>
       </div>
 

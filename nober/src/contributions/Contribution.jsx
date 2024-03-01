@@ -32,7 +32,7 @@ const Contribution = () => {
         description: description
       }
       console.log(payload)
-      axiosClient.post('http://127.0.0.1:8000/api/cont/contributions/', payload)
+      axiosClient.post('/cont/contributions/', payload)
       .then((data)=>{
         console.log("Success")
         window.location.reload()
